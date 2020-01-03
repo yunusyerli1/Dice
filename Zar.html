@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Roll Dices</title>
+        <style>
+            .buttons{
+                background-color: darkolivegreen;
+                padding: 30px;
+                margin: 40px;
+            }
+            .buttons:hover{
+                background-color: green;
+            
+            }
+            #button3{
+                position: absolute;
+                left:120px;
+            }
+  
+        </style>
+    </head>
+    <body>
+    <div>
+        <button class="buttons" id="button1"></button>
+        <button class="buttons" id="button2"></button>
+    </div>
+    
+ 
+    <div>
+        <button id="button3">Zar at</button>
+    </div>
+    
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $("#button3").click(function(){
+            let random1=Math.floor(Math.random()*6)+1;
+            let random2=Math.floor(Math.random()*6)+1;
+            $("#button1").text(random1).css("color","white");
+            $("#button2").text(random2).css("color","white");
+        });
+        
+
+    </script> 
+    
+    </body>
+</html>
